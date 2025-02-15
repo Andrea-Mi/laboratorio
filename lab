@@ -1,0 +1,145 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+       
+        Console.Write("Ingresa un número entero (NE): ");
+        int NE = int.Parse(Console.ReadLine()); 
+
+        Console.Write("Ingresa un número decimal (Nd): ");
+        double Nd = double.Parse(Console.ReadLine()); 
+
+        Console.Write("Ingresa un texto (T): ");
+        string T = Console.ReadLine(); 
+
+        Console.Write("Ingresa un valor verdadero o falso (true/false) (B): ");
+        bool B = bool.Parse(Console.ReadLine()); 
+
+       
+        Console.WriteLine("\nValores ingresados:");
+        Console.WriteLine($"NE: {NE}, Nd: {Nd}, T: \"{T}\", B: {B}\n");
+
+       
+        Console.Write("Ingresa el primer número entero para las operaciones (NE1): ");
+        int NE1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa el segundo número entero para las operaciones (NE2): ");
+        int NE2 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("\nOperaciones Matemáticas:");
+        Console.WriteLine($"Suma: {NE1} + {NE2} = {NE1 + NE2}");
+        Console.WriteLine($"Resta: {NE1} - {NE2} = {NE1 - NE2}");
+        Console.WriteLine($"Multiplicación: {NE1} * {NE2} = {NE1 * NE2}");
+        Console.WriteLine($"División: {NE1} / {NE2} = {(NE2 != 0 ? (double)NE1 / NE2 : "No se puede dividir entre cero")}\n");
+
+       
+        Console.Write("Ingresa un número decimal (float) (F): ");
+        float F = float.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa un número corto (Int16) (S): ");
+        short S = short.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa un número byte (0-255) (Bte): ");
+        byte Bte = byte.Parse(Console.ReadLine());
+
+       
+        Console.WriteLine($"Valores ingresados - F: {F}, S: {S}, Bte: {Bte}\n");
+
+        Console.Write("Ingresa el primer número para comparar (A): ");
+        int A = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa el segundo número para comparar (B): ");
+        int B2 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("\nOperaciones Lógicas:");
+        Console.WriteLine($"{A} > {B2} -> {A > B2}");
+        Console.WriteLine($"{A} < {B2} -> {A < B2}");
+        Console.WriteLine($"{A} == {B2} -> {A == B2}");
+        Console.WriteLine($"{A} > 5 && {B2} < 10 -> {A > 5 && B2 < 10}");
+        Console.WriteLine($"{A} < 5 || {B2} > 10 -> {A < 5 || B2 > 10}");
+
+        // Enunciado 1: Clasificación de Edad
+        Console.Write("\nIngresa tu edad: ");
+        int edad = int.Parse(Console.ReadLine());
+
+        if (edad < 12)
+        {
+            Console.WriteLine("Niño");
+        }
+        else if (edad >= 12 && edad <= 17)
+        {
+            Console.WriteLine("Adolescente");
+        }
+        else if (edad >= 18 && edad <= 59)
+        {
+            Console.WriteLine("Adulto");
+        }
+        else
+        {
+            Console.WriteLine("Adulto mayor");
+        }
+
+        Console.WriteLine();
+        // Enunciado 2: Día de la Semana
+        Console.Write("Ingresa una opción del 1 al 7 para buscar el día de la semana: ");
+        int dia = int.Parse(Console.ReadLine());
+
+        switch (dia)
+        {
+            case 1:
+                Console.WriteLine("Lunes");
+                break;
+            case 2:
+                Console.WriteLine("Martes");
+                break;
+            case 3:
+                Console.WriteLine("Miércoles");
+                break;
+            case 4:
+                Console.WriteLine("Jueves");
+                break;
+            case 5:
+                Console.WriteLine("Viernes");
+                break;
+            case 6:
+                Console.WriteLine("Sábado");
+                break;
+            case 7:
+                Console.WriteLine("Domingo");
+                break;
+            default:
+                Console.WriteLine("Número inválido");
+                break;
+        }
+
+        Console.WriteLine();
+
+        // Enunciado 3: Verificación de Acceso
+        string usuarioRegistrado = "Andrea Miranda ";
+        string contrasenaRegistrada = "Andrea123";
+
+        Console.Write("Ingresa tu nombre de usuario: ");
+        string usuario = Console.ReadLine();
+
+        Console.Write("Ingresa tu contraseña: ");
+        string contrasena = Console.ReadLine();
+
+        if (usuario == usuarioRegistrado)
+        {
+            if (contrasena == contrasenaRegistrada)
+            {
+                Console.WriteLine("Acceso concedido");
+            }
+            else
+            {
+                Console.WriteLine("Contraseña incorrecta");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Usuario no registrado");
+        }
+    }
+}
